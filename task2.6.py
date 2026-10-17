@@ -5,6 +5,9 @@ attempts = 6
 while attempts > 0 and "_" in guessed:
     print(guessed)
     letter = input("Введите букву: ").lower()
+    if len(letter) != 1:
+        print("Введите одну букву!")
+        continue
     if letter in used_letters:
         continue
     used_letters.append(letter)
